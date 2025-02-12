@@ -44,10 +44,25 @@ const CombinedHeroHeader = () => {
                 <ul className="drawer-links">
                     <li><a href="#home" onClick={toggleDrawer}>Home</a></li>
                     <li><a href="#about" onClick={toggleDrawer}>About</a></li>
-                    <li><a href="#services" onClick={toggleDrawer}>Services</a></li>
+                    <li className="drawer-dropdown">
+            <span className="drawer-dropbtn" onClick={(e) => {
+                e.stopPropagation();
+                e.currentTarget.nextSibling.classList.toggle('open');
+            }}>Services ▼</span>
+                        <ul className="drawer-dropdown-content">
+                            <li><a href="#architectural-design" onClick={toggleDrawer}>Architectural Design</a></li>
+                            <li><a href="#construction-services" onClick={toggleDrawer}>Construction Services</a></li>
+                            <li><a href="#interior-design" onClick={toggleDrawer}>Interior Design Solutions</a></li>
+                            <li><a href="#renovation-remodeling" onClick={toggleDrawer}>Renovation & Remodeling</a></li>
+                            <li><a href="#project-management" onClick={toggleDrawer}>Project Management</a></li>
+                            <li><a href="#3d-visualization" onClick={toggleDrawer}>3D Visualization & Planning</a></li>
+                            <li><a href="#vastu-planning" onClick={toggleDrawer}>VASTU Planning and Consultation</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#contact" onClick={toggleDrawer}>Contact</a></li>
                 </ul>
             </div>
+
         </nav>
     );
 };
