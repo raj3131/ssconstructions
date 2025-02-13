@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
-import "./About.css";
+import "./Landing.css";
 import heroimg from "../images/hero1.png";
 import heroimg2 from "../images/hero2.png";
+import AboutSection from "./RAW/AboutSection";
 
-export default function AboutUs() {
+
+
+export default function Landing() {
     const images = [heroimg, heroimg2];
     const [currentImage, setCurrentImage] = useState(0);
     const [fade, setFade] = useState(true);
@@ -16,13 +19,16 @@ export default function AboutUs() {
                     prevImage === images.length - 1 ? 0 : prevImage + 1
                 );
                 setFade(true);
-            }, 500); // Matches CSS transition duration
-        }, 3000); // Change image every 3 seconds
+            }, 500);
+        }, 3000);
 
         return () => clearInterval(interval);
     }, [images.length]);
 
-    return (
+      return (
+        <>
+
+
         <div className="container">
             <div className="left-half">
                 <img
@@ -38,6 +44,18 @@ export default function AboutUs() {
                     <h1 className="subtext">Build</h1>
                 </div>
             </div>
+
         </div>
+
+
+
+
+<AboutSection/>
+
+
+
+
+
+        </>
     );
 }

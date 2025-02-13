@@ -132,6 +132,7 @@
 
 /* General Styles */
 .appbar {
+    /*width: 100vw;*/
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -221,6 +222,7 @@
     font-size: 18px;
 }
 
+
 /* Responsive Styles */
 @media (max-width: 776px) {
     .desktop-nav {
@@ -229,6 +231,18 @@
 
     .hamburger {
         display: flex;
+    }
+
+
+
+    .appbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
     }
 }
 
@@ -298,4 +312,29 @@
 
 
 
+
+
+
+
+
+
+
+
+.company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px; /* Adjust as needed */
+}
+
+.company-name {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
 

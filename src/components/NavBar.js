@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import logo from "../images/Logo.png";
-import "./CombinedHeroHeader.css";
+import "./NavBar.css";
 
-const CombinedHeroHeader = () => {
+const NavBar = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
 
     const toggleDrawer = () => {
@@ -16,7 +16,14 @@ const CombinedHeroHeader = () => {
                 <li><a href="#about">About</a></li>
             </ul>
 
-            <img src={logo} alt="Logo" className="logo" />
+
+            <div className="company">
+                <img src={logo} alt="Logo" className="logo" />
+                <p className="company-name">SS Constructions and Interior Solutions</p>
+            </div>
+
+
+
 
             <ul className="nav-links desktop-nav">
                 <li className="dropdown">
@@ -67,4 +74,4 @@ const CombinedHeroHeader = () => {
     );
 };
 
-export default CombinedHeroHeader;
+export default NavBar;
