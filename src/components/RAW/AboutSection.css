@@ -89,3 +89,38 @@
     color: #555;
     margin-bottom: 0.5rem;
 }
+
+
+
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .welcome-heading {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+    }
+
+    .welcome-text {
+        font-size: 0.9rem; /* Smaller text for mobile */
+    }
+
+    .info-container {
+        flex-direction: column; /* Stack cards vertically */
+        gap: 1rem; /* Reduce gap between cards */
+    }
+
+    .card {
+        padding: 1rem; /* Reduce padding for smaller screens */
+    }
+
+    .about-heading,
+    .mission-heading,
+    .values-heading {
+        font-size: 1.5rem; /* Smaller headings for mobile */
+    }
+
+    .about-text,
+    .mission-text,
+    .values-list li {
+        font-size: 0.9rem; /* Smaller text for mobile */
+    }
+}
