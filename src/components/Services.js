@@ -86,11 +86,13 @@ const Services  = () => {
             </div>
 
             <div className="service-item">
+
+                <div className="service-image">
+                    <img src={threed} alt="Interior Design Solutions" />
+                </div>
                 <div className="service-description">
 
-                    <div className="service-image">
-                        <img src={threed} alt="Interior Design Solutions" />
-                    </div>
+
                     <h2>3D visualisation & planning</h2>
                     <p>
                         we use advanced 3D visualization techniques to turn your design ideas into clear, lifelike representations. Our planning process ensures every detail is meticulously planned and optimized for both form and function, helping you make informed decisions and envision the final outcome before construction begins.

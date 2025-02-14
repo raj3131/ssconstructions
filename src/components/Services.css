@@ -20,6 +20,7 @@
     border-radius: 8px;
     background-color: #fff; /* White background for each service item */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a nice effect */
+    gap: 1rem;
 }
 
 .service-description {
