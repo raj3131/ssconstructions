@@ -2,7 +2,7 @@
 import React from 'react';
 import './App.css'; // Import the CSS file here
 import Landing from './components/Landing';
-// import Services from './components/Services';
+import Services from './components/Services';
 // import Portfolio from './components/Portfolio';
 // import Contact from './components/Contact';
 // import Footer from './components/Footer';
@@ -16,7 +16,7 @@ const App = () => {
             </header>
             <main className="appjsmain"> {/* Change <body> to <main> for better semantics */}
                 <Landing />
-                {/*<Services />*/}
+                <Services />
                 {/*<Portfolio />*/}
                 {/*<Contact />*/}
                 {/*<Footer />*/}

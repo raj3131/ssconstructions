@@ -1,16 +1,16 @@
-.about-section{
-    width: 100%;
-}
+
 
 
 /* General Styling */
 .about-section {
+    width: 100%;
     padding: 2rem;
     text-align: center;
+
 }
 
 .about-content {
-    max-width: 1200px;
+    max-width: 80rem;
     margin: 0 auto;
 }
 
@@ -42,7 +42,7 @@
     flex: 1; /* Ensures equal width for all cards */
     background: #f9f9f9;
     padding: 1.5rem;
-    border-radius: 10px;
+
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -56,7 +56,7 @@
 .about-text {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
+    color: #000000;
 }
 
 /* Mission Section */
@@ -68,7 +68,7 @@
 .mission-text {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
+    color: #000000;
 }
 
 /* Values Section */
@@ -86,7 +86,7 @@
 .values-list li {
     font-size: 1rem;
     line-height: 1.6;
-    color: #555;
+    color: #000000;
     margin-bottom: 0.5rem;
 }
 
@@ -124,3 +124,205 @@
         font-size: 0.9rem; /* Smaller text for mobile */
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about-section {
+    padding: 55px;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        padding: 35px;
+    }
+}
+
+.about-container {
+    border: 2px solid #A27B5C; /* Border around the entire section */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow effect */
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds spacing between the sections */
+}
+
+/* The rest of your existing CSS can remain unchanged */
+.divider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider-line {
+    height: 1px;
+    background-color: #000;
+    flex-grow: 1;
+}
+
+.hollow-circle {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #3F4F44; /* Brown border */
+    border-radius: 50%; /* Makes it circular */
+    margin: 0 10px;
+}
+
+/* Other styles for the content */
+.card {
+    padding: 20px;
+    border: 1px solid #ddd;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section, .info-container, .about-details, .mission-section, .values-section {
+    margin-bottom: 20px;
+}
+
+/* Add styles for the text, headings, etc. */
+.welcome-heading {
+    font-size: 2rem;
+    color: #333;
+}
+
+.welcome-text, .about-text, .mission-text {
+    font-size: 1rem;
+    color: #000000;
+}
+
+.about-heading, .mission-heading, .values-heading {
+    font-size: 1.5rem;
+    color: #af7e5e;
+}
+
+.values-list {
+    list-style: none;
+    padding: 0;
+}
+
+.values-list li {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+.about-details.card {
+    position: relative;
+    background: url('../../images/construction.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    color: #fff; /* Change text color if necessary */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+}
+
+.about-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* White tint with 50% opacity */
+    z-index: 1; /* Ensures the overlay is above the background but below the text */
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+.mission-section.card {
+    position: relative;
+    background: url('../../images/mission.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    color: #fff; /* Change text color if necessary */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+}
+
+.about-overlay {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.5); /* White tint with 50% opacity */
+    z-index: 1; /* Ensures the overlay is above the background but below the text */
+}
+
+.about-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+.values-section.card {
+    position: relative;
+    background: url('../../images/values.png') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    color: #000000; /* Change text color if necessary */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+
+}
+
+.values-section.card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*background: rgba(255, 255, 255, 0.5);*/
+    z-index: 1; /* Ensures the overlay is above the background but below the text */
+}
+
+.values-section.card .values-list {
+    position: relative;
+    z-index: 2; /* Ensures the text is on top of the white overlay */
+}
+
