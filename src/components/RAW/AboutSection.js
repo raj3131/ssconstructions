@@ -3,7 +3,7 @@ import './AboutSection.css'; // Import your CSS file
 
 const AboutSection = () => {
     return (
-        <div className="about-section">
+        <div id="about" className="about-section">
             <div className="about-content">
                 {/* Welcome, Section - Centered Aesthetically */}
                 <div className="welcome-section">

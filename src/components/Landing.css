@@ -1,6 +1,7 @@
 
 
 .container {
+    /*margin-top: 148px;*/
     display: flex;
     /*width: 100vw;*/
     /*height: 100vh;*/
@@ -58,6 +59,8 @@
 }
 
 .shift-left {
+    padding-top :50px;
+    padding-bottom: 50px;
     margin-left: 6vw;
     font-size: 6vw;
     line-height: 1;
@@ -98,6 +101,8 @@
     }
 
     .shift-left {
+        padding-top :50px;
+        padding-bottom: 50px;
         margin-left: 6vw;
         font-size: 12vw;
         line-height: 1;

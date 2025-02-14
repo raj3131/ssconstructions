@@ -1,29 +1,60 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../images/Logo.png";
 import "./NavBar.css";
 
 const NavBar = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);
+    const [showNav, setShowNav] = useState(true);
+    const [lastScrollY, setLastScrollY] = useState(0);
 
     const toggleDrawer = () => {
         setDrawerOpen(!drawerOpen);
     };
 
+
+
+
+    // Add this inside the useEffect to toggle body scroll
+    useEffect(() => {
+        if (drawerOpen) {
+            document.body.style.overflow = 'hidden'; // Disable scrolling
+        } else {
+            document.body.style.overflow = 'auto'; // Enable scrolling
+        }
+    }, [drawerOpen]);
+
+
+
+
+    // Handle scroll event
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY;
+            if (currentScrollY > lastScrollY) {
+                setShowNav(false); // Scroll down -> hide
+            } else {
+                setShowNav(true);  // Scroll up -> show
+            }
+            setLastScrollY(currentScrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, [lastScrollY]);
+
     return (
-        <nav className="appbar">
+        <nav className={`appbar ${showNav ? "visible" : "hidden"}`}>
             <ul className="nav-links desktop-nav">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
 
-
             <div className="company">
                 <img src={logo} alt="Logo" className="logo" />
                 <p className="company-name">SS Constructions and Interior Solutions</p>
             </div>
-
-
-
 
             <ul className="nav-links desktop-nav">
                 <li className="dropdown">
@@ -48,14 +79,15 @@ const NavBar = () => {
             </div>
 
             <div className={`drawer ${drawerOpen ? "open" : ""}`}>
+                <div className="scrollable">
                 <ul className="drawer-links">
                     <li><a href="#home" onClick={toggleDrawer}>Home</a></li>
                     <li><a href="#about" onClick={toggleDrawer}>About</a></li>
                     <li className="drawer-dropdown">
-            <span className="drawer-dropbtn" onClick={(e) => {
-                e.stopPropagation();
-                e.currentTarget.nextSibling.classList.toggle('open');
-            }}>Services ▼</span>
+                        <span className="drawer-dropbtn" onClick={(e) => {
+                            e.stopPropagation();
+                            e.currentTarget.nextSibling.classList.toggle('open');
+                        }}>Services ▼</span>
                         <ul className="drawer-dropdown-content">
                             <li><a href="#architectural-design" onClick={toggleDrawer}>Architectural Design</a></li>
                             <li><a href="#construction-services" onClick={toggleDrawer}>Construction Services</a></li>
@@ -68,8 +100,8 @@ const NavBar = () => {
                     </li>
                     <li><a href="#contact" onClick={toggleDrawer}>Contact</a></li>
                 </ul>
+                </div>
             </div>
-
         </nav>
     );
 };

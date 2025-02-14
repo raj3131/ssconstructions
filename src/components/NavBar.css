@@ -1,11 +1,26 @@
-/*.appbar {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    padding: 10px 10%;*/
-/*    background-color: white;*/
-/*    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
-/*}*/
+.appbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 100px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+}
+
+.appbar.visible {
+    transform: translateY(0);
+}
+
+.appbar.hidden {
+    transform: translateY(-100%);
+}
+
+
 
 .nav-links {
     display: flex;
@@ -62,7 +77,7 @@
 
 
 
-/*drop down*/
+/*drop down web view */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -129,19 +144,6 @@
 
 
 
-
-/* General Styles */
-.appbar {
-    /*width: 100vw;*/
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #fff;
-    padding: 10px 100px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
-
 .logo {
     /*height: 50px;*/
     width: 150px;
@@ -191,17 +193,31 @@
 .drawer {
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -250px; /* Hide drawer off-screen by default */
     width: 250px;
-    height: 100%;
-    background-color: #333;
-    transition: left 0.3s ease;
-    z-index: 1000;
+    height: 120vh; /* Ensure it fits the viewport height */
+    background: linear-gradient(135deg, #3F4F44, #D7CCC8);
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: left 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Bouncy slide-in animation */
     padding-top: 60px;
+    z-index: 1000;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
+.scrollable {
+    height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    padding-right: 10px; /* Optional: Adds space for scrollbar */
+    box-sizing: border-box;
+}
+
+
+
 .drawer.open {
-    left: 0;
+    left: 0; /* Bring drawer into view */
 }
 
 .drawer-links {
@@ -212,66 +228,51 @@
 
 .drawer-links li {
     margin: 20px 0;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 0.3s ease;
+}
+
+.drawer.open .drawer-links li {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .drawer-links li a {
+    text-align: center;
     color: #fff;
     text-decoration: none;
     display: block;
     padding: 10px 20px;
     font-size: 18px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.drawer-links li a:hover {
+    background: rgba(255, 255, 255, 0.2); /* Hover effect */
+}
+
+/* Animation for staggered link appearance */
+.drawer.open .drawer-links li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.drawer.open .drawer-links li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.drawer.open .drawer-links li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.drawer.open .drawer-links li:nth-child(4) {
+    transition-delay: 0.4s;
 }
 
 
-/* Responsive Styles */
-@media (max-width: 776px) {
-    .desktop-nav {
-        display: none;
-    }
 
-    .hamburger {
-        display: flex;
-    }
-
-
-
-    .appbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        background-color: #fff;
-        padding: 10px 50px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        position: relative;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*drawer dropdown */
 
 .drawer-dropdown {
     list-style: none;
@@ -279,6 +280,7 @@
 }
 
 .drawer-dropbtn {
+    text-align: center;
     cursor: pointer;
     display: block;
     padding: 10px 0;
@@ -309,6 +311,103 @@
 .drawer-dropdown-content li a:hover {
     color: #000;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 776px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+
+
+    .appbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #fff;
+        padding: 10px 50px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        z-index: 999;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

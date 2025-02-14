@@ -1,0 +1,16 @@
+/* App.css */
+
+.appjsheadrer {
+    height: 148px;
+    background-color: #f8f9fa; /* Change this to whatever background color you want */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: add a subtle shadow */
+    z-index: 1000;
+}
+
+
+.appjsmain{
+    z-index: 100;
+}
