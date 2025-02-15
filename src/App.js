@@ -7,6 +7,7 @@ import Services from './components/Services';
 // import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NavBar from "./components/NavBar";
+import Testimonials from "./components/Testimonials";
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
             <main className="appjsmain"> {/* Change <body> to <main> for better semantics */}
                 <Landing />
                 <Services />
+                <Testimonials/>
                 {/*<Portfolio />*/}
                 {/*<Contact />*/}
                 <Footer />
