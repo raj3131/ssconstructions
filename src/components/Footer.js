@@ -4,6 +4,10 @@ import './Footer.css'; // Make sure to import the CSS file
 const Footer = () => {
     return (
         <footer className="footer">
+            <div className="footer-section intro-section">
+                <p>Ready to transform your space? Let’s bring your vision to life! Whether you need an interior design consultation or a detailed quote for your project, I’m here to help.</p>
+                <p>Contact me today for a personalized consultation and let’s make your dream space a reality!</p>
+            </div>
             <div className="footer-section">
                 <h2 className="footer-title">SS Construction & Interior Solutions</h2>
                 <p>Your trusted partner in transforming spaces into personalized works of art.</p>

@@ -1,0 +1,111 @@
+.portfolio-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, flexible */
+    gap: 20px; /* Space between images */
+    margin-top: 30px;
+}
+
+/* Individual grid item styles */
+.item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Control the size of specific items */
+.item:nth-child(1) {
+    grid-column: span 1; /* Make the first item span 2 columns */
+    grid-row: span 1; /* Make the first item span 2 rows */
+}
+
+.item:nth-child(2) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item:nth-child(4) {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item:nth-child(5) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item:nth-child(6) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item:nth-child(7) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item:nth-child(8) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item:nth-child(9) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item:nth-child(10) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.item:nth-child(11) {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Responsive grid layout */
+@media screen and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+
+    .item:nth-child(1), .item:nth-child(4), .item:nth-child(6), .item:nth-child(10) {
+        grid-column: span 2; /* Items that were large before become 2-column span */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+
+    .item:nth-child(1), .item:nth-child(4), .item:nth-child(6), .item:nth-child(10) {
+        grid-column: span 2; /* Items that were large before become 2-column span */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+
+    .item {
+        grid-column: span 1; /* Each item spans the entire row */
+    }
+}
