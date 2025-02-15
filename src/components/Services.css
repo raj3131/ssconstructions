@@ -17,28 +17,30 @@
     margin-bottom: 40px;
     border: 1px solid #ddd; /* Optional border between service items */
     padding: 20px;
-    border-radius: 8px;
     background-color: #fff; /* White background for each service item */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a nice effect */
     gap: 1rem;
+    height: 400px;
 }
 
 .service-description {
     flex: 1;
-    padding-right: 20px; /* Adds space between text and image */
+    padding-right: 100px;
+    padding-left: 40px;
+    line-height: 2.6;
 }
 
 .service-description h2 {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
     color: #333;
     margin-bottom: 10px;
 }
 
 .service-description p {
+
     font-size: 1rem;
     color: #555;
 }
-
 .service-image {
     flex: 1;
     max-width: 400px; /* Max width for images */
@@ -47,19 +49,45 @@
 .service-image img {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+
 }
 
-@media (max-width: 768px) {
+
+
+
+
+
+
+
+@media (max-width: 1446px) {
     .service-item {
         flex-direction: column;
         text-align: center;
+        height: auto;
+        padding: 47px;
     }
 
     .service-description {
         padding-right: 0;
+        padding-left: 0;
         margin-bottom: 20px;
+        line-height: 2;
     }
+
+
+
+    .service-description h2 {
+        font-size: 1.6rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .service-description p {
+        font-size: 1rem;
+        color: #555;
+    }
+
+
 
     .service-image img {
         max-width: 100%;
