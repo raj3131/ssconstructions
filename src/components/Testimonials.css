@@ -10,6 +10,15 @@
 
 }
 
+
+.Testimonials-heading{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
 .testimonial {
     box-sizing: border-box;
     display: flex;

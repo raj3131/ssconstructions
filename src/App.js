@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css'; // Import the CSS file here
 import Landing from './components/Landing';
 import Services from './components/Services';
-import Portfolio from './components/Portfolio';
+// import Portfolio from './components/Portfolio';
 // import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NavBar from "./components/NavBar";
@@ -19,7 +19,7 @@ const App = () => {
                 <Landing />
                 <Services />
                 <Testimonials/>
-                <Portfolio />
+                {/*<Portfolio />*/}
                 {/*<Contact />*/}
                 <Footer />
             </main>
