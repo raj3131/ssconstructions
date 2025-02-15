@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../images/Logo.png";
+import logo from "../images/favicon.ico";
 import "./NavBar.css";
 
 const NavBar = () => {
@@ -47,13 +47,13 @@ const NavBar = () => {
     return (
         <nav className={`appbar ${showNav ? "visible" : "hidden"}`}>
             <ul className="nav-links desktop-nav">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#homee">Home</a></li>
                 <li><a href="#about">About</a></li>
             </ul>
 
             <div className="company">
                 <img src={logo} alt="Logo" className="logo" />
-                <p className="company-name">SS Constructions and Interior Solutions</p>
+                <p className="company-name">SS Constructions & Interior Solutions</p>
             </div>
 
             <ul className="nav-links desktop-nav">
@@ -69,7 +69,7 @@ const NavBar = () => {
                         <a href="#vastu-planning">VASTU Planning and Consultation</a>
                     </div>
                 </li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#fooooter">Contact</a></li>
             </ul>
 
             <div className={`hamburger ${drawerOpen ? "open" : ""}`} onClick={toggleDrawer}>
@@ -95,10 +95,10 @@ const NavBar = () => {
                             <li><a href="#renovation-remodeling" onClick={toggleDrawer}>Renovation & Remodeling</a></li>
                             <li><a href="#project-management" onClick={toggleDrawer}>Project Management</a></li>
                             <li><a href="#3d-visualization" onClick={toggleDrawer}>3D Visualization & Planning</a></li>
-                            <li><a href="#vastu-planning" onClick={toggleDrawer}>VASTU Planning and Consultation</a></li>
+                            <li><a href="#vastu-planning" onClick={toggleDrawer}>Vastu Planning and Consultation</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact" onClick={toggleDrawer}>Contact</a></li>
+                    <li><a href="#fooooter" onClick={toggleDrawer}>Contact</a></li>
                 </ul>
                 </div>
             </div>

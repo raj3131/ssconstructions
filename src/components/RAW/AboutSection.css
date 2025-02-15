@@ -174,6 +174,7 @@
 
 /* The rest of your existing CSS can remain unchanged */
 .divider-container {
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -253,7 +254,7 @@
 
 .about-heading, .mission-heading, .values-heading {
     font-size: 1.5rem;
-    color: #af7e5e;
+    color: #000000;
 }
 
 .values-list {
@@ -277,7 +278,15 @@
     padding: 20px;
     color: #fff; /* Change text color if necessary */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
 }
+
+.about-details.card:hover {
+    background: rgba(0, 0, 0, 0.4) url('../../images/construction.png') no-repeat center center; /* Darken the background */
+    background-size: cover;
+    transform: scale(1.05); /* Slightly scale up the card for effect */
+}
+
 
 .about-overlay {
     content: '';
@@ -311,7 +320,15 @@
     padding: 20px;
     color: #fff; /* Change text color if necessary */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
 }
+
+.mission-section.card:hover {
+    background: rgba(0, 0, 0, 0.4) url('../../images/mission.png') no-repeat center center; /* Darken the background */
+    background-size: cover;
+    transform: scale(1.05); /* Slightly scale up the card for effect */
+}
+
 
 .about-overlay {
     content: '';
@@ -342,24 +359,71 @@
     background-size: cover;
     padding: 20px;
     color: #000000; /* Change text color if necessary */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
-
-
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and transform */
 }
 
-.values-section.card::after {
+.values-section.card:hover {
+    background: rgba(0, 0, 0, 0.4) url('../../images/values.png') no-repeat center center; /* Darken the background */
+    background-size: cover;
+    transform: scale(1.05); /* Slightly scale up the card for effect */
+}
+
+
+.about-overlay {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    /*background: rgba(255, 255, 255, 0.5);*/
+    background: rgba(255, 255, 255, 0.5); /* White tint with 50% opacity */
     z-index: 1; /* Ensures the overlay is above the background but below the text */
+    transition: background 0.3s ease, opacity 0.3s ease; /* Smooth transition for background and opacity */
 }
 
-.values-section.card .values-list {
-    position: relative;
-    z-index: 2; /* Ensures the text is on top of the white overlay */
+.about-overlay:hover {
+    background: rgba(255, 255, 255, 0.8); /* Increase opacity on hover */
+    opacity: 0.8; /* Enhance the opacity when hovered */
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 828px) {
+    .welcome-heading {
+        font-size: 2rem;
+        color: #333;
+    }
+
+    .welcome-text {
+        font-size: 1.1rem;
+        color: #000000;
+    }
+
+
+
+
+    .about-container {
+        padding: 10px;
+    }
+}

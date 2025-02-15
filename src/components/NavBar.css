@@ -6,12 +6,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.06); /* semi-transparent white */
+    backdrop-filter: blur(10px); /* apply blur effect */
     padding: 10px 100px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.5s ease;
     z-index: 9999999;
+
 }
+
 
 .appbar.visible {
     transform: translateY(0);
@@ -432,7 +435,7 @@
 
 .company-name {
     text-align: center;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     margin-top: 5px;
     color: #333;

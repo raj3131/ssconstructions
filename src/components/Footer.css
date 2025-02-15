@@ -1,10 +1,17 @@
+
 .footer {
     background-color: #3F4F44; /* Dark green background */
     color: #FFF; /* White text for contrast */
     padding: 40px 0; /* Adjusted padding for better spacing */
     text-align: left; /* Align text to the left for better structure */
     font-family: Arial, sans-serif;
-    box-sizing: border-box; /* Ensures padding doesn’t affect layout */
+    box-sizing: border-box;
+    clip-path: polygon(0 0, 100% 17%, 100% 100%, 0% 100%);
+
+}
+
+.footer-title2{
+    text-align: center;
 }
 
 .footer a {
@@ -83,6 +90,7 @@
 
 /* Separator Line Between Sections */
 .footer .footer-right {
+    margin-top: 69px;
     border-left: 2px solid #A27B5C; /* Subtle line separator */
     padding-left: 20px;
 }
@@ -132,5 +140,17 @@ justify-content: center;
 
     .footer .footer-title {
         font-size: 18px; /* Slightly smaller titles for mobile */
+    }
+
+
+    .footer {
+        background-color: #3F4F44; /* Dark green background */
+        color: #FFF; /* White text for contrast */
+        padding: 40px 0; /* Adjusted padding for better spacing */
+        text-align: left; /* Align text to the left for better structure */
+        font-family: Arial, sans-serif;
+        box-sizing: border-box;
+        clip-path: polygon(0 0, 100% 8%, 100% 100%, 0% 100%);
+
     }
 }

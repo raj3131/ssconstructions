@@ -23,9 +23,9 @@ html{
 }
 
 
-/*body{*/
-/*  margin-top: 148px;*/
-/*}*/
+body {
+  background: linear-gradient(135deg, #fbfdf3, rgba(248, 248, 236, 0.3));
+}
 
 
 h1, h2, h3 {

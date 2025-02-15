@@ -103,7 +103,7 @@ const Services  = () => {
 
             <div id="vastu-planning" className="service-item">
                 <div className="service-description">
-                    <h2>VASTU PLANNING AND CONSULTATION</h2>
+                    <h2>Vastu Planning & Consultation</h2>
                     <p>
                         we offer expert Vastu planning and consultation to create harmonious spaces that promote positive energy flow. Our approach integrates Vastu principles with modern design to enhance well-being, balance, and prosperity. Whether you're designing a new space or renovating an existing one, we provide tailored solutions that align with Vastu guidelines to ensure a peaceful and prosperous environment.
 

@@ -129,5 +129,14 @@
     .testimonial {
         width: 100%;
         padding: 15px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .Testimonials-heading {
+        text-align: center;
+        font-size: 3rem;
+        margin-bottom: 30px;
+        color: #333;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     }
 }

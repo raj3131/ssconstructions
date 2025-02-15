@@ -4,17 +4,20 @@ import logo from '../images/favicon.ico';
 
 const Footer = () => {
     return (
-        <footer className="footer">
-            <div className="footer-container">
+        <footer  className="footer">
+            <div id="fooooter" className="footer-container">
                 <div className="footer-left">
                     <img src={logo}/>
                     <div className="footer-section intro-section">
                         <p>Ready to transform your space? Let’s bring your vision to life! Whether you need an interior design consultation or a detailed quote for your project, I’m here to help.</p>
                         <p>Contact me today for a personalized consultation and let’s make your dream space a reality!</p>
+
+                        <p>Your trusted partner in transforming spaces into personalized works of art.</p>
                     </div>
                     <div className="footer-section">
-                        <h2 className="footer-title">SS Construction & Interior Solutions</h2>
-                        <p>Your trusted partner in transforming spaces into personalized works of art.</p>
+
+                        <h2 className="footer-title2">SS Construction & Interior Solutions</h2>
+
                     </div>
                 </div>
                 <div className="footer-right">

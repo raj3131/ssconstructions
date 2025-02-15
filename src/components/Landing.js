@@ -1,61 +1,37 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Landing.css";
-import heroimg from "../images/hero1.png";
-import heroimg2 from "../images/hero2.png";
-import AboutSection from "./RAW/AboutSection";
 
-
+import herovid from "../images/Pink & Blue Futuristic Gaming Channel Youtube Intro.mp4";
+import herovidphn from "../images/herovidphn.mp4";  // Mobile video
 
 export default function Landing() {
-    const images = [heroimg, heroimg2];
-    const [currentImage, setCurrentImage] = useState(0);
-    const [fade, setFade] = useState(true);
+    return (
+        <div id="homee" className="container">
+            <div className="hero-video">
+                <video
+                    className="video-background desktop-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ objectFit: 'cover', width: '100%', height: '100vh' }}
+                >
+                    <source src={herovid} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setFade(false);
-            setTimeout(() => {
-                setCurrentImage((prevImage) =>
-                    prevImage === images.length - 1 ? 0 : prevImage + 1
-                );
-                setFade(true);
-            }, 500);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [images.length]);
-
-      return (
-        <>
-
-
-        <div className="container">
-            <div className="left-half">
-                <img
-                    alt="Slideshow"
-                    src={images[currentImage]}
-                    className={`image ${fade ? "fade-in" : "fade-out"}`}
-                />
+                <video
+                    className="video-background mobile-video"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    style={{ objectFit: 'cover', width: '100%', height: '100vh' }}
+                >
+                    <source src={herovidphn} type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
-            <div className="right-half">
-                <div className="text-container">
-                    <h1 className="text">Dream</h1>
-                    <h1 className="shift-left">Design</h1>
-                    <h1 className="subtext">Build</h1>
-                </div>
-            </div>
-
         </div>
-
-
-
-
-<AboutSection/>
-
-
-
-
-
-        </>
     );
 }
