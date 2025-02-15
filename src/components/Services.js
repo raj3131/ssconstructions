@@ -113,6 +113,17 @@ const Services  = () => {
                     <img src={vastiu} alt="Interior Design Solutions" />
                 </div>
             </div>
+
+
+
+            <div className="divider2-container">
+                <div className="divider-line"></div>
+                <div className="hollow-circle"></div>
+                <div className="divider-line"></div>
+            </div>
+
+
+
         </div>
     );
 };

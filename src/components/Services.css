@@ -1,27 +1,40 @@
 .services-section {
-    padding: 50px 20px;
-    background-color: #f9f9f9; /* Light background for the section */
+    /*padding: 50px 20px;*/
+
+    padding-left: 50px;
+    padding-right: 50px;/* Light background for the section */
 }
 
 .services-heading {
     text-align: center;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 30px;
     color: #333;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .service-item {
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
-    border: 1px solid #ddd; /* Optional border between service items */
     padding: 20px;
-    background-color: #fff; /* White background for each service item */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for a nice effect */
-    gap: 1rem;
     height: 400px;
-}
+    gap: 1rem;
+
+    border-width: 5px;
+    border-style: solid;
+    border-image:
+            linear-gradient(
+                    to bottom,
+                    #3f4f44,
+                    rgba(0, 0, 0, 0)
+            ) 1 100%;
+
+    }
+
+
 
 .service-description {
     flex: 1;
@@ -65,6 +78,10 @@
         text-align: center;
         height: auto;
         padding: 30px;
+        border: 1px solid #ddd; /* Optional border between service items */
+
+        background-color: #fff; /* White background for each service item */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);/* Optional shadow for a nice effect */
     }
 
     .service-description {
@@ -92,4 +109,20 @@
     .service-image img {
         max-width: 100%;
     }
+}
+
+
+
+
+
+
+
+
+
+
+.divider2-container {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

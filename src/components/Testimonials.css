@@ -1,65 +1,124 @@
-/* Testimonials.css */
-h1 {
-    text-align: center;
-}
-
-.testimonials-container {
-    justify-content: center;
+.testimonials {
+    box-sizing: border-box;
     display: flex;
-    flex-direction: row; /* Default: Row layout for larger screens */
-    align-items: center;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
-    padding: 20px; /* Optional: Add padding around the container */
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 0px auto;
+    width: 100%;
+    padding: 40px 20px;
+
 }
 
 .testimonial {
-    width: 500px;
-    height: 400px;
-    margin: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    text-align: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 360px;
+    max-width: 100%;
+    margin: 0px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(13, 45, 160, 0.15) 0px 6px 20px -5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(13, 45, 160, 0.2) 0px 10px 30px -5px;
 }
 
 .testimonial-image {
+    box-sizing: border-box;
     width: 100px;
     height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+    min-width: 100px;
+    min-height: 100px;
     margin-bottom: 15px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
-.testimonial-rating .star {
-    font-size: 20px;
-    color: #ffcc00; /* Star color */
-    margin: 0 2px;
+.testimonial-content {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    flex: 1 1 0%;
+    height: 100%;
 }
 
-.testimonial h3 {
-    margin-top: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.testimonial p {
-    margin-top: 10px;
+.testimonial-content p {
+    display: flex;
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
     font-style: italic;
-    color: #555;
+    line-height: 1.5;
+    margin: 0px;
+    padding: 25px 5px 5px;
+    color: rgb(105, 114, 138);
+    overflow-wrap: break-word;
 }
 
-/* Mobile responsiveness: Stack testimonials vertically */
+.testimonial-content p::before {
+    content: "\201C";
+    font-size: 4em;
+    font-weight: 700;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    color: #3F4F44;
+    position: absolute;
+    top: -25px;
+    left: -2px;
+}
+
+.testimonial-content footer {
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    color: rgb(141, 149, 172);
+    margin-top: 15px;
+}
+
+.testimonial-rating {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 2px;
+}
+
+.testimonial-rating svg {
+    fill: rgb(241, 196, 15);
+}
+
+.testimonial.horizontal {
+    flex-direction: row;
+    width: 320px;
+}
+
+.testimonial.horizontal .testimonial-image {
+    margin-right: 15px;
+}
+
+.testimonial.horizontal .testimonial-rating {
+    justify-content: flex-end;
+}
+
 @media (max-width: 768px) {
-    .testimonials-container {
-        flex-direction: column; /* Change to column layout on mobile */
-        align-items: center; /* Center align items */
-        padding: 10px; /* Optional: Reduce padding for smaller screens */
+    .testimonials {
+        padding: 20px;
     }
 
     .testimonial {
-        width: 90%; /* Ensure the testimonial is responsive */
-        height: auto; /* Adjust height to auto for better flexibility */
-        margin: 10px 0; /* Add some space between testimonials */
+        width: 100%;
+        padding: 15px;
     }
 }
