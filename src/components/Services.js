@@ -15,7 +15,7 @@ const Services  = () => {
 
             {/* Architectural Design Service */}
             <div className="service-item">
-                <div className="service-description">
+                <div id="architectural-design" className="service-description">
                     <h2>Architectural Design</h2>
                     <p>
                         Our architectural design services focus on creating innovative, functional, and aesthetically pleasing spaces tailored to our clients' needs. We specialize in residential, commercial, industrial, and institutional projects, delivering bespoke designs that harmonize with the environment and meet modern standards. From concept development to detailed drawings, we ensure every project is a perfect blend of creativity and practicality.
@@ -27,7 +27,7 @@ const Services  = () => {
             </div>
 
             {/* Construction Services */}
-            <div className="service-item">
+            <div id="construction-services"  className="service-item">
 
                 <div className="service-image">
                     <img src={construction} alt="Construction Services" />
@@ -42,9 +42,8 @@ const Services  = () => {
 
             </div>
 
-            {/* Repeat similar structure for other services */}
-            {/* Interior Design Solutions */}
-            <div className="service-item">
+                       {/* Interior Design Solutions */}
+            <div id="interior-design" className="service-item">
                 <div className="service-description">
                     <h2>Interior Design Solutions</h2>
                     <p>
@@ -58,7 +57,7 @@ const Services  = () => {
 
             <div className="service-item">
 
-                <div className="service-image">
+                <div id="renovation-remodeling" className="service-image">
                     <img src={renovation} alt="Interior Design Solutions" />
                 </div>
 
@@ -70,7 +69,7 @@ const Services  = () => {
                 </div>
             </div>
 
-            <div className="service-item">
+            <div id="project-management" className="service-item">
                 <div className="service-description">
                     <h2>Project Management
                     </h2>
@@ -85,7 +84,7 @@ const Services  = () => {
                 </div>
             </div>
 
-            <div className="service-item">
+            <div id="3d-visualization" className="service-item">
 
                 <div className="service-image">
                     <img src={threed} alt="Interior Design Solutions" />
@@ -102,7 +101,7 @@ const Services  = () => {
 
             </div>
 
-            <div className="service-item">
+            <div id="vastu-planning" className="service-item">
                 <div className="service-description">
                     <h2>VASTU PLANNING AND CONSULTATION</h2>
                     <p>

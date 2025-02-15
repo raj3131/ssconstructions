@@ -87,7 +87,7 @@ const NavBar = () => {
                         <span className="drawer-dropbtn" onClick={(e) => {
                             e.stopPropagation();
                             e.currentTarget.nextSibling.classList.toggle('open');
-                        }}>Services ▼</span>
+                        }}>   Services ▼</span>
                         <ul className="drawer-dropdown-content">
                             <li><a href="#architectural-design" onClick={toggleDrawer}>Architectural Design</a></li>
                             <li><a href="#construction-services" onClick={toggleDrawer}>Construction Services</a></li>

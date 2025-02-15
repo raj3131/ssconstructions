@@ -1,13 +1,15 @@
 /* Testimonials.css */
-h1{
+h1 {
     text-align: center;
 }
+
 .testimonials-container {
     justify-content: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: row; /* Default: Row layout for larger screens */
     align-items: center;
-    /*padding: 20px;*/
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 20px; /* Optional: Add padding around the container */
 }
 
 .testimonial {
@@ -19,7 +21,6 @@ h1{
     border-radius: 8px;
     background-color: #f9f9f9;
     text-align: center;
-
 }
 
 .testimonial-image {
@@ -46,4 +47,19 @@ h1{
     margin-top: 10px;
     font-style: italic;
     color: #555;
+}
+
+/* Mobile responsiveness: Stack testimonials vertically */
+@media (max-width: 768px) {
+    .testimonials-container {
+        flex-direction: column; /* Change to column layout on mobile */
+        align-items: center; /* Center align items */
+        padding: 10px; /* Optional: Reduce padding for smaller screens */
+    }
+
+    .testimonial {
+        width: 90%; /* Ensure the testimonial is responsive */
+        height: auto; /* Adjust height to auto for better flexibility */
+        margin: 10px 0; /* Add some space between testimonials */
+    }
 }
