@@ -1,8 +1,7 @@
 .services-section {
-    /*padding: 50px 20px;*/
 
     padding-left: 50px;
-    padding-right: 50px;/* Light background for the section */
+    padding-right: 50px;
 }
 
 .services-heading {
@@ -69,6 +68,14 @@
 
 
 @media (max-width: 1446px) {
+
+
+    .services-section {
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
     .service-item {
         flex-direction: column;
         text-align: center;
@@ -96,6 +103,7 @@
     }
 
     .service-description p {
+        text-align: justify;
         font-size: 1rem;
         color: #555;
     }
